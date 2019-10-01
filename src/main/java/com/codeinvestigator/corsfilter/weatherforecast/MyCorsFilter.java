@@ -23,7 +23,7 @@ public class MyCorsFilter implements Filter {
                          FilterChain chain) throws IOException, ServletException {
         log.info("The Filter itself");
         HttpServletResponse httpresponse = (HttpServletResponse)response;
-        httpresponse.setHeader("Access-Control-Allow-Origin","mikesimportantwebsite.dk");
+        httpresponse.setHeader("Access-Control-Allow-Origin","*");
         httpresponse.setHeader("Access-Control-Allow-Methods","GET, POST, OPTIONS, PUT, DELETE");
         httpresponse.setHeader("Access-Control-Allow-Headers","Origin, Content-Type, Accept, Customheader, *");
         httpresponse.setHeader("Access-Control-Max-Age","3600");
